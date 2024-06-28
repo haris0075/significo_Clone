@@ -1,0 +1,23 @@
+*::selection{
+    background-color: #EF9D71;
+}
+div{
+    transition: background-color ease-out 0.5s;
+}
+div[theme="black"]{
+    background-color: black;
+    color: white !important;
+}
+div[theme="#AEDEE0"]{
+    background-color: #AEDEE0;
+}
+div[theme="#EF9D71"]{
+    background-color: #EF9D71;
+}
+div[theme="white"]{
+    background-color: white;
+    color: black !important;
+}
+div[theme="#F5F19C"]{
+    background-color: #F5F19C;
+}

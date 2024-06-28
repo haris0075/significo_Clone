@@ -9,18 +9,18 @@ function App() {
   const wrapperRef = useRef(null);
   const [bgcolor, setbgcolor] = useState("black")
 
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-            multiplier:1,
-        });
-      }
-    )()
-  }, [])
+  // useEffect( () => {
+  //   (
+  //     async () => {
+  //         const LocomotiveScroll = (await import('locomotive-scroll')).default
+  //         const locomotiveScroll = new LocomotiveScroll({
+  //           el: document.querySelector('[data-scroll-container]'),
+  //           smooth: true,
+  //           multiplier:1,
+  //       });
+  //     }
+  //   )()
+  // }, [])
   useGSAP(()=>{
     gsap.registerPlugin(ScrollTrigger)
     console.log(document.querySelectorAll(".section"));

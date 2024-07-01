@@ -9,9 +9,21 @@ function App() {
   const wrapperRef = useRef(null);
   const [bgcolor, setbgcolor] = useState("black")
 
+  useEffect( () => {
+    ;(
+
+      async () => {
+
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
+
+  }, [])
+  
   useGSAP(()=>{
     gsap.registerPlugin(ScrollTrigger)
-    console.log(document.querySelectorAll(".section"));
+    // console.log(document.querySelectorAll(".section"));
     document.querySelectorAll(".section")
     .forEach(function(e){
       ScrollTrigger.create({

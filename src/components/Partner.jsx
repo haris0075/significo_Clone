@@ -5,6 +5,7 @@ import React from 'react'
 function Partner() {
 
     useGSAP(()=>{
+        let slide_box = gsap.utils.toArray(".slide")
         let t1= gsap.timeline({
             scrollTrigger:{
                 trigger:".maincont",
@@ -14,8 +15,8 @@ function Partner() {
                 // markers:true
             }
         })
-        t1.to(".slide",{
-            xPercent:"-310",
+        t1.to(slide_box,{
+            xPercent:-100*(slide_box.length-1),
             ease:Power4,
         },"a")
         .to(".picright",{
